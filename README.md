@@ -1,3 +1,8 @@
+## Features
+
+- Execute git pull command in certain remote sever from local.
+- ...
+
 ## Requirements
 
 - Python 2.7+ or 3.4+
@@ -20,3 +25,4 @@ python fabricfile.py
  1. Add exception detecting.
  2. Implement multiple server deployment.
  3. Execute script with project config.
+ 4. Package the project ,emit to server and deploy it.
