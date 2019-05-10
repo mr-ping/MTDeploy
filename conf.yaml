@@ -1,0 +1,10 @@
+connection:
+  host: 192.168.7.164
+  port: 22
+  username: yangping
+  password: ~
+git:
+  host: 192.168.7.50
+  path: '~/www/MTD_Service_Price'
+  username: yangping
+  password: 222222..
