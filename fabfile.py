@@ -24,7 +24,8 @@ gitpassword = Responder(
 conn = Connection(
     host=conf_obj['connection']['host'],
     user=conf_obj['connection']['username'],
-    port=conf_obj['connection']['port'])
+    port=conf_obj['connection']['port'],
+    connect_kwargs={'password': conf_obj['connection']['password']})
 with conn.cd(conf_obj['git']['path']):
     corrent_branch = conn.run(
         "git branch | grep \\* | cut -d ' ' -f2",
