@@ -17,12 +17,13 @@ Change the configuration elements in conf.yaml file with your values.
 Open your terminal:
 
 ```bash
-python fabricfile.py
+python fabfile.py
 ```
 
 ## TODO:
 
  1. Add exception detecting.
  2. Implement multiple server deployment.
- 3. Execute script with project config.
+ 3. Multiple projects spport.
  4. Package the project ,emit to server and deploy it.
+ 5. Web Panel.
