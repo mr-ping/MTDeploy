@@ -1,6 +1,7 @@
 ## Features
 
 - Execute git pull command in certain remote sever from local.
+- Multiple service support.
 - ...
 
 ## Requirements
@@ -15,6 +16,12 @@
 Change the configuration elements in conf.yaml file with your values.
 
 Open your terminal:
+
+```bash
+python fabfile.py --serivce=service_price
+```
+
+It will pick up the 1st service if no service is pointed.
 
 ```bash
 python fabfile.py
