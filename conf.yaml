@@ -1,13 +1,14 @@
-connection:
-  host: MTDTest01
-  port: 22
-  # The username of ssh to login
-  username: yangping
-  # If you already copy your public key into the server, live '~'
-  # as the value of password
-  password: ~
-git:
-  host: 192.168.7.50
-  path: '~/www/MTD_Service_Price'
-  username: yangping
-  password: 222222..
+service_price:
+  connection:
+    host: MTDTest01
+    port: 22
+    # The username of ssh to login
+    username: yangping
+    # If you already copy your public key into the server, live '~'
+    # as the value of password
+    password: ~
+  git:
+    host: 192.168.7.50
+    path: '~/www/MTD_Service_Price'
+    username: yangping
+    password: 222222..

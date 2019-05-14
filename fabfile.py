@@ -1,3 +1,5 @@
+import argparse
+
 from fabric import Connection
 from invoke import Responder
 try:
@@ -7,17 +9,27 @@ except ImportError:
 import yaml
 
 
+parser = argparse.ArgumentParser()
+parser.add_argument(
+    '--service', type=str, help='The service which is in config file')
+args = parser.parse_args()
+service_name = args.service
+
 with open('conf.yaml', 'r') as conf_f:
     conf_s = conf_f.read()
     conf_obj = yaml.load(conf_s, Loader=Loader)
 
+if service_name:
+    conf_obj = conf_obj.get(service_name)
 
 gitusername = Responder(
-    pattern=r'Username for .*{host}.*'.format(host=conf_obj['git']['host']),
+    pattern=r'Username for .*{host}.*'.format(
+        host=conf_obj['git']['host']),
     response='{}\n'.format(conf_obj['git']['username']),
 )
 gitpassword = Responder(
-    pattern=r'Password for .*{host}.*'.format(host=conf_obj['git']['host']),
+    pattern=r'Password for .*{host}.*'.format(
+        host=conf_obj['git']['host']),
     response='{}\n'.format(conf_obj['git']['password']),
 )
 
